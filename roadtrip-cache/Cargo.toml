@@ -1,0 +1,23 @@
+[package]
+name = "roadtrip-cache"
+version = "0.1.0"
+authors = ["Sam Wilson <tecywiz121@hotmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+snafu = "0.6.8"
+tokio = { version = "0.2.22", features = ["fs", "sync", "stream", "blocking"] }
+futures = "0.3.5"
+linked-hash-map = "0.5.3"
+filetime = "0.2.12"
+roadtrip-walkdir = { path = "../roadtrip-walkdir" }
+
+[dependencies.fd-lock]
+git = "https://github.com/tecywiz121/fd-lock"
+rev = "7dbcfda8f4ecaec4b532af8e387f808bf4ef550d"
+
+[dev-dependencies]
+tokio = { version = "0.2.22", features = ["fs", "rt-threaded", "macros", "io-util"] }
+tempfile = "3.1.0"

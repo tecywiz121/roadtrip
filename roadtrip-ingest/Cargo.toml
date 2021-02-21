@@ -1,0 +1,16 @@
+[package]
+name = "roadtrip-ingest"
+version = "0.1.0"
+authors = ["Sam Wilson <tecywiz121@hotmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+roadtrip-core = { path = "../roadtrip-core" }
+roadtrip-walkdir = { path = "../roadtrip-walkdir" }
+snafu = "0.6.8"
+futures = "0.3.5"
+tokio = { version = "0.2.22", features = ["process", "fs", "io-util"] }
+gpx = "0.8.1"
+sha3 = "0.9.1"

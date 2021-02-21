@@ -1,0 +1,21 @@
+[package]
+name = "roadtrip-viewer"
+version = "0.1.0"
+authors = ["Sam Wilson <tecywiz121@hotmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "0.3.5"
+tokio = { version = "0.2.22", features = ["sync", "rt-core", "rt-util", "stream", "fs", "io-util"] }
+roadtrip-ingest = { path = "../roadtrip-ingest" }
+roadtrip-core = { path = "../roadtrip-core" }
+roadtrip-cache = { path = "../roadtrip-cache" }
+directories = "3.0.1"
+snafu = "0.6.8"
+gstreamer = "0.16.3"
+glib = "0.10.1"
+
+[dev-dependencies]
+tokio = { version = "0.2.22", features = ["sync", "rt-threaded", "stream", "macros", "time"] }
